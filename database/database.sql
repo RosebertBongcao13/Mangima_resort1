@@ -35,6 +35,12 @@ CREATE TABLE reservations (
     check_out DATE NOT NULL,
     total_price DECIMAL(10,2) NOT NULL,
     status ENUM('pending','confirmed','cancelled','checked_in','checked_out') DEFAULT 'pending',
+
+    -- Added guest information columns
+    guest_name VARCHAR(150) NULL,
+    guest_contact VARCHAR(50) NULL,
+    guest_email VARCHAR(150) NULL,
+
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (room_id) REFERENCES rooms(room_id) ON DELETE CASCADE
 );
@@ -65,7 +71,7 @@ CREATE TABLE reservation_amenities (
 
 -- Sample data
 INSERT INTO users (full_name, email, contact_number, password, role) VALUES
-('Admin User', 'admin@resort.com', '09123456789', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin'), -- password is "password"
+('Admin User', 'admin@resort.com', '09123456789', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin'),
 ('Staff User', 'staff@resort.com', '09234567890', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'staff'),
 ('Regular User', 'user@resort.com', '09345678901', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user');
 
@@ -82,10 +88,41 @@ INSERT INTO amenities (amenity_name, price) VALUES
 ('Late Checkout', 400.00);
 
 -- A sample reservation
-INSERT INTO reservations (user_id, room_id, check_in, check_out, total_price, status) VALUES
-(3, 1, '2026-05-10', '2026-05-12', 10000.00, 'confirmed');
+INSERT INTO reservations (
+    user_id,
+    room_id,
+    check_in,
+    check_out,
+    total_price,
+    status,
+    guest_name,
+    guest_contact,
+    guest_email
+) VALUES (
+    3,
+    1,
+    '2026-05-10',
+    '2026-05-12',
+    10000.00,
+    'confirmed',
+    'Juan Dela Cruz',
+    '09123456789',
+    'juan@email.com'
+);
 
-INSERT INTO reservation_amenities (reservation_id, amenity_id) VALUES (1, 1), (1, 2);
+INSERT INTO reservation_amenities (reservation_id, amenity_id)
+VALUES (1, 1), (1, 2);
 
-INSERT INTO payments (reservation_id, amount, payment_method, payment_status, payment_date) VALUES
-(1, 10000.00, 'Credit Card', 'paid', '2026-05-04 10:30:00');
+INSERT INTO payments (
+    reservation_id,
+    amount,
+    payment_method,
+    payment_status,
+    payment_date
+) VALUES (
+    1,
+    10000.00,
+    'Credit Card',
+    'paid',
+    '2026-05-04 10:30:00'
+);
