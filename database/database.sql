@@ -168,6 +168,10 @@ INSERT INTO reservations (
 INSERT INTO reservation_amenities (reservation_id, amenity_id)
 VALUES (1, 1), (1, 2);
 
+-- =====================================================
+-- Insert sample payment record
+-- =====================================================
+
 INSERT INTO payments (
     reservation_id,
     amount,
