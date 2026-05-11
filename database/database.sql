@@ -89,6 +89,11 @@ CREATE TABLE payments (
     FOREIGN KEY (reservation_id) REFERENCES reservations(reservation_id) ON DELETE CASCADE
 );
 
+-- =====================================================
+-- AMENITIES TABLE
+-- Stores additional resort services
+-- =====================================================
+
 CREATE TABLE amenities (
     amenity_id INT AUTO_INCREMENT PRIMARY KEY,
     amenity_name VARCHAR(100) NOT NULL,
