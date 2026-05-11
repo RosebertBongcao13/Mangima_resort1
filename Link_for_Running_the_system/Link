@@ -11,3 +11,11 @@ http://localhost/mangima_resort
 -- Purpose:
 -- To show reservation records together with user details
 -- =====================================================
+
+
+-- =====================================================
+-- LEFT JOIN
+-- Displays all users even if they have no reservations
+-- Purpose:
+-- To identify users without bookings
+-- =====================================================
