@@ -38,12 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
     exit;
 }
 
-$editAmenity = null;
-if ($action === 'edit' && $id) {
-    $stmt = $db->prepare("SELECT * FROM amenities WHERE amenity_id=?");
-    $stmt->execute([$id]);
-    $editAmenity = $stmt->fetch();
-}
+
 
 $amenities = $db->query("SELECT * FROM amenities ORDER BY amenity_id")->fetchAll();
 

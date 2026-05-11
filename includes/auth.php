@@ -37,13 +37,3 @@ function requireRole($roles) {
     }
 }
 
-/**
- * Redirect if already logged in (for login page)
- */
-function redirectIfLoggedIn() {
-    if (isLoggedIn()) {
-        header('Location: /mangima_resort/index.php');
-        exit;
-    }
-}
-?>
