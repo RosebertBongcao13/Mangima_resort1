@@ -100,6 +100,12 @@ CREATE TABLE amenities (
     price DECIMAL(10,2) NOT NULL
 );
 
+-- =====================================================
+-- RESERVATION_AMENITIES TABLE
+-- Junction table for many-to-many relationship
+-- between reservations and amenities
+-- =====================================================
+
 CREATE TABLE reservation_amenities (
     id INT AUTO_INCREMENT PRIMARY KEY,
     reservation_id INT NOT NULL,
