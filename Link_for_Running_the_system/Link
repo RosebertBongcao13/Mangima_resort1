@@ -1,1 +1,13 @@
 http://localhost/mangima_resort
+
+
+-- =====================================================
+-- SQL JOIN INTEGRATION EXAMPLES
+-- =====================================================
+
+-- =====================================================
+-- INNER JOIN
+-- Displays users with matching reservations only
+-- Purpose:
+-- To show reservation records together with user details
+-- =====================================================
