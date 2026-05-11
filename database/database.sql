@@ -160,6 +160,11 @@ INSERT INTO reservations (
     'juan@email.com'
 );
 
+-- =====================================================
+-- Assign amenities to reservation
+-- Demonstrates many-to-many relationship
+-- =====================================================
+
 INSERT INTO reservation_amenities (reservation_id, amenity_id)
 VALUES (1, 1), (1, 2);
 
