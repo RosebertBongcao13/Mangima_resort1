@@ -73,6 +73,12 @@ CREATE TABLE reservations (
     FOREIGN KEY (room_id) REFERENCES rooms(room_id) ON DELETE CASCADE
 );
 
+-- =====================================================
+-- PAYMENTS TABLE
+-- Stores payment information for reservations
+-- =====================================================
+
+
 CREATE TABLE payments (
     payment_id INT AUTO_INCREMENT PRIMARY KEY,
     reservation_id INT NOT NULL,
