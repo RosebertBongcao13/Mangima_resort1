@@ -27,3 +27,12 @@ http://localhost/mangima_resort
 -- Purpose:
 -- To ensure all reservation records are displayed
 -- =====================================================
+
+
+-- =====================================================
+-- FULL OUTER JOIN SIMULATION
+-- MySQL does not directly support FULL OUTER JOIN
+-- This is simulated using LEFT JOIN + RIGHT JOIN + UNION
+-- Purpose:
+-- To display all users and reservations whether matched or not
+-- =====================================================
