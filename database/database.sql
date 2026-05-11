@@ -14,6 +14,11 @@ DROP TABLE IF EXISTS amenities;
 DROP TABLE IF EXISTS rooms;
 DROP TABLE IF EXISTS users;
 
+-- =====================================================
+-- USERS TABLE
+-- Stores account information for admin, staff, and users
+-- =====================================================
+
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(100) NOT NULL,
