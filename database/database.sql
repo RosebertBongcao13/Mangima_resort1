@@ -2,6 +2,11 @@
 CREATE DATABASE IF NOT EXISTS mangima_resort;
 USE mangima_resort;
 
+-- =====================================================
+-- DROP EXISTING TABLES
+-- Drops tables in reverse order to avoid foreign key errors
+-- =====================================================
+
 DROP TABLE IF EXISTS reservation_amenities;
 DROP TABLE IF EXISTS payments;
 DROP TABLE IF EXISTS reservations;
