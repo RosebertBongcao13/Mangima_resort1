@@ -42,6 +42,11 @@ CREATE TABLE rooms (
     status ENUM('available','occupied','maintenance') DEFAULT 'available'
 );
 
+-- =====================================================
+-- RESERVATIONS TABLE
+-- Stores booking details made by users
+-- =====================================================
+
 CREATE TABLE reservations (
     reservation_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
