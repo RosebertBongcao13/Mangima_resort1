@@ -132,7 +132,12 @@ INSERT INTO amenities (amenity_name, price) VALUES
 ('Spa Access', 1200.00),
 ('Late Checkout', 400.00);
 
--- A sample reservation
+-- =====================================================
+-- SAMPLE RESERVATION
+-- Demonstrates relationship between:
+-- users table and rooms table
+-- =====================================================
+
 INSERT INTO reservations (
     user_id,
     room_id,
