@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #fff;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.error {
+    color: red;
+    background: #ffe6e6;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.success {
+    color: green;
+    background: #e6ffe6;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+form input, form select, form textarea {
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+button, .btn {
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #aaa;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th a {
+    text-decoration: none;
+    color: #000;
+}
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.stat-box {
+    background: #e0e0e0;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
