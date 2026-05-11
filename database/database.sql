@@ -61,6 +61,14 @@ CREATE TABLE reservations (
     guest_contact VARCHAR(50) NULL,
     guest_email VARCHAR(150) NULL,
 
+     -- =================================================
+    -- FOREIGN KEY RELATIONSHIPS
+    -- Links reservations to users and rooms tables
+    -- ON DELETE CASCADE automatically deletes
+    -- related reservations if user or room is deleted
+    -- =================================================
+
+
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (room_id) REFERENCES rooms(room_id) ON DELETE CASCADE
 );
