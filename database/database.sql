@@ -28,6 +28,11 @@ CREATE TABLE users (
     role ENUM('user','staff','admin') DEFAULT 'user'
 );
 
+-- =====================================================
+-- ROOMS TABLE
+-- Stores resort room information
+-- =====================================================
+
 CREATE TABLE rooms (
     room_id INT AUTO_INCREMENT PRIMARY KEY,
     room_name VARCHAR(100) NOT NULL,
